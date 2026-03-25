@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Voucher</title>
+</head>
+<body>
+
+<h2>Create Voucher</h2>
+
+<form method="post" action="/saveVoucher">
+
+    Code:
+    <input type="text" name="code" required />
+    <br><br>
+
+    Discount:
+    <input type="number" name="discount" step="0.01" required />
+    <br><br>
+
+    Expire Date:
+    <input type="date" name="expireDate" required />
+    <br><br>
+
+    <button type="submit">Save</button>
+
+</form>
+
+</body>
+</html>

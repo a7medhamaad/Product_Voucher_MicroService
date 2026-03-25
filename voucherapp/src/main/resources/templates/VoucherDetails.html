@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Voucher Details</title>
+</head>
+<body>
+
+<h2>Voucher Details</h2>
+
+<p>Code: <span th:text="${voucher.code}"></span></p>
+<p>Discount: <span th:text="${voucher.discount}"></span></p>
+<p>Expire Date: <span th:text="${voucher.expireDate}"></span></p>
+
+<br>
+<a href="/showGetVoucher">Back</a>
+
+</body>
+</html>

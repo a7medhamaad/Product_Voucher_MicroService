@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <title>Home</title>
+</head>
+<body>
+
+<h2>Welcome</h2>
+
+<a href="/showCreateVoucher">Create Voucher</a>
+<br><br>
+<a href="/showGetVoucher">Get Voucher</a>
+
+<br><br>
+
+<div sec:authorize="isAuthenticated()">
+
+    <p>Logged in as: <span sec:authentication="name"></span></p>
+
+    <form method="post" action="/logout">
+        <button style="background:red;color:white;padding:10px;border:none;">
+            Logout
+        </button>
+    </form>
+
+</div>
+
+</body>
+</html>
